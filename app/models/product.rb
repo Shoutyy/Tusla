@@ -1,4 +1,7 @@
 class Product < ApplicationRecord
 belongs_to :user
-has_many :review, dependent: :destroy
+belongs_to :category
+
+validates :user, :category, :name, :price, :description, :stock, presence: true
+
 end
