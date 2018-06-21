@@ -22,21 +22,48 @@
   background-size: cover !important;
 }
 
+.photo-index {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+  width: 100%;
+  background-size: cover !important;
+}
+
 .card-home2 {
   box-shadow: 1px 3px 5px rgba(0,0,0,0.3);
   margin: 10px 30px;
-  width: 250px;
+  width: 280px;
 }
 
-.top-product-first-line {
-  display: inline;
-  align-item: center;
-  justify-content: center;
+.card-index {
+  box-shadow: 1px 3px 5px rgba(0,0,0,0.3);
+  margin: 10px 30px;
+  width: 280px;
 }
 
-.top-product-second-line {
+.cards-index {
   display: flex;
   align-item: center;
   justify-content: center;
+  flex-wrap: wrap;
+  margin-right: 10%;
+  margin-left: 10%;
 }
+
+.top-product-line {
+  display: flex;
+  align-item: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+// .top-product-second-line {
+//   display: flex;
+//   align-item: center;
+//   justify-content: center;
+// }
 
