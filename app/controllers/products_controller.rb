@@ -29,9 +29,10 @@ skip_before_action :authenticate_user!, only: [:index, :show]
   def create
     @product = Product.new(product_params)
     @product.user = current_user
+    @product.category = Category.find(1)
     @product.save
     if @product.save
-      redirect_to productpath(@product)
+      redirect_to product_path(@product)
     else
       render :new
     end
