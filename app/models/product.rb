@@ -1,4 +1,15 @@
 class Product < ApplicationRecord
+
+include PgSearch
+pg_search_scope :search_products,
+against: [ :name ],
+associated_against: {
+  category: [ :name ]
+},
+using: {
+  tsearch: { prefix: true }
+}
+
 belongs_to :user
 belongs_to :category
 

@@ -2,7 +2,20 @@ class ProductsController < ApplicationController
 skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    @products = Product.all
+    search_options = []
+    if params[:category].present?
+      search_options << params[:category]
+    end
+    if params[:name].present?
+      search_options << params[:name]
+    end
+    @search = params[:search]
+
+    if search_options.blank?
+      @products = Product.all
+    else
+      @products = Product.search_products(search_options)
+    end
   end
 
   def show
