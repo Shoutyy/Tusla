@@ -1,4 +1,5 @@
 class Product < ApplicationRecord
+  mount_uploader :photo, PhotoUploader
 
 include PgSearch
 pg_search_scope :search_products,
