@@ -1,6 +1,5 @@
 .searchbar-index {
   display: flex;
-  margin-top: 150px;
   justify-content: center;
   background-color: #BBBBBB;
   padding: 20px 0px;
@@ -15,4 +14,8 @@
   display: flex;
   align-item: center;
   justify-content: center;
+}
+
+.margin-top {
+  height: 130px;
 }
