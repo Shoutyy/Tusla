@@ -4,6 +4,15 @@
     <%= image_tag "logo.png", height: 50 %>
   <% end %>
 
+  <div class="dropdown">
+    <button class="dropbtn">Products</button>
+    <div class="dropdown-content">
+      <%= link_to "Alimentaire", products_path(category: "Alimentaire") %>
+      <%= link_to "Medicament", products_path(category: "Medicament") %>
+      <%= link_to "Ingredient", products_path(category: "Ingredient") %>
+    </div>
+  </div>
+
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 
