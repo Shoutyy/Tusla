@@ -28,3 +28,28 @@
 .texte-index p {
   padding-left: 7px;
 }
+
+.texte-show h2 {
+  font-size: 25px;
+  padding-left: 7px;
+}
+
+.texte-show p {
+  padding-left: 7px;
+}
+
+.description-show  {
+ display: flex;
+ align-item: center;
+ justify-content: center;
+ flex-direction: column;
+ margin: 10px 50px;
+ border: solid;
+ border-size: 1px;
+ border-color: #e7e6e1;
+ padding: 0px 10px;
+}
+
+.description-show h2 {
+ text-align: center;
+}
