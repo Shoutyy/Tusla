@@ -4,12 +4,19 @@
   <div class="card-show">
       <div class="photo-show" style="background: url('https://images.unsplash.com/photo-1503262028195-93c528f03218?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=c3f919b2d1bf7d9a8d2746781dbea799&auto=format&fit=crop&w=1651&q=80');">
       </div>
-      <div class="texte-show">
-        <h2><%= @product.name %></h2>
-        <p> Category: <%= @product.category.name %></p>
-        <p> Description: <%= @product.description %></p>
-        <p> Prix: <%= @product.price %> €</p>
-      </div>
+      <form>
+        <div class="texte-show">
+          <h2><%= @product.name %></h2>
+          <p> Category: <%= @product.category.name %></p>
+          <p> Description: <%= @product.description %></p>
+          <p> Prix: <%= @product.price %> €/Unité (Gramme)</p>
+          <p> Quantité: <input id="quantity" type="number" name="quantity" min="1" max="100" value="1" required> <span class="validity"></span></p>
+          <span class="validity"></span>
+          <div class="show-submit" >
+            <input type="submit" value="Ajouter au panier">
+          </div>
+        </div>
+      </form>
   </div>
 </div>
 <div class="description-show">
@@ -18,4 +25,3 @@
 
   Le Cannabidiol CBD possède par contre de nombreuses propriétés thérapeutiques que nous allons vous présenter dans cet article. Une caractéristique intéressante de cette molécule est sa très faible toxicité, et d’avoir ainsi très peu d’effets secondaires indésirables : dans le pire des cas, une dose trop élevée ne pourrait provoquer qu’une sédation (envie de dormir). Nous pouvons remarquer que le CBD ne possède qu’une très faible affinité avec les récepteurs à cannabinoïdes (CB1 et CB2), mais qu’il agit cependant de manière plus prononcée sur d’autres récepteurs du corps humain, tels que le GPR55 ou le 5-HT1A.</p>
 </div>
-

@@ -3,3 +3,28 @@
   justify-content: space-around;
 }
 
+input:invalid+span:after {
+  content: '✖';
+  padding-left: 5px;
+}
+
+input:valid+span:after {
+  content: '✓';
+  padding-left: 5px;
+}
+
+#quantity {
+  width: 100px;
+}
+
+.show-submit input {
+  background: transparent;
+  color: #588d9c;
+  width: 220px;
+  font-size: 14px;
+  border-radius: 25px;
+  border: 2px solid #588d9c;
+  box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
+  text-align: center;
+  padding: 5px 0px;
+}
