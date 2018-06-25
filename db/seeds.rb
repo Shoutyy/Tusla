@@ -8,6 +8,7 @@
 
 Product.destroy_all
 User.destroy_all
+Category.destroy_all
 
 Category.create(name: "Alimentaire")
 Category.create(name: "Medicament")
