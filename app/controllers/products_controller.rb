@@ -29,7 +29,6 @@ skip_before_action :authenticate_user!, only: [:index, :show]
   def create
     @product = Product.new(product_params)
     @product.user = current_user
-    @product.category = Category.find(1)
     @product.save
     if @product.save
       redirect_to product_path(@product)
@@ -58,7 +57,7 @@ skip_before_action :authenticate_user!, only: [:index, :show]
   private
 
   def product_params
-    params.require(:product).permit(:category, :name, :price, :description, :photo, :stock)
+    params.require(:product).permit(:category_id, :name, :price, :description, :photo, :stock)
   end
 
 end
