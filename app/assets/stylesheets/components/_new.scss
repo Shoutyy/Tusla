@@ -1,0 +1,42 @@
+.container-new {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.title-new {
+  display: flex;
+  justify-content: center;
+}
+
+.new-input {
+  display: flex;
+  justify-content: center;
+}
+
+.container-new-guide{
+  display: flex;
+  justify-content: center;
+}
+
+.new-product-guide {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 600px;
+  width: 100%;
+  border: solid;
+  border-size: 2px;
+  border-color: #fd2e2e;
+}
+
+.new-product-guide h2 {
+  display: flex;
+  justify-content: center;
+}
+ .new-li {
+  display: block;
+  justify-content: center;
+  padding: 0px 0px 5px 10px;
+ }
