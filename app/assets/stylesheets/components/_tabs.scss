@@ -1,0 +1,33 @@
+.tabs {
+  background: #c4e3cb;
+  display: flex;
+  padding: 0px 10px 0 10px;
+  justify-content: center;
+}
+.tabs a {
+  color: white;
+}
+
+.tabs h3 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: -3px;
+}
+.tab {
+  background: #64a36f;
+  flex: 0 0 15%;
+  text-align: center;
+  padding: 15px 0;
+}
+.tab.active {
+  background: #f4f4f4 !important;
+  color: #64a36f !important;
+}
+
+.tab:first-child {
+  border-radius: 2px 0 0 0;
+}
+.tab:last-child {
+  border-radius: 0 2px 0 0;
+}

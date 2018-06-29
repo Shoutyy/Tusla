@@ -1,0 +1,12 @@
+function myClient() {
+  const my_client = document.getElementById("my_client");
+  my_client.innerHTML = "<%= j render 'cards_client', my_client: @my_client %>";
+}
+
+function mySeller() {
+  const my_seller = document.getElementById("my_seller");
+  my_seller.innerHTML = "<%= j render 'cards_seller', my_seller: @my_seller %>";
+}
+
+myClient();
+mySeller();
