@@ -1,6 +1,16 @@
 <div class="profile-main-container">
     <div class="profile-products">
-
-
+      <% current_user.product.each do |c| %>
+        <div class="profile-product-card">
+            <div class="photo-product-card" style="background: url('https://images.unsplash.com/photo-1503262028195-93c528f03218?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=c3f919b2d1bf7d9a8d2746781dbea799&auto=format&fit=crop&w=1651&q=80');">
+            </div>
+            <div class="texte-profile-card">
+              <p>Product's name : <%= c.name %></p>
+              <p>Product's description : <%= c.description %></p>
+              <p>Product's price : <%= c.price %></p>
+              <p>Product's stock : <%= c.stock %></p>
+            </div>
+        </div>
+      <% end %>
     </div>
 </div>
