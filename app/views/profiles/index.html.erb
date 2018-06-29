@@ -6,3 +6,57 @@
   <h2> Hello, <%= current_user.first_name %> <%= current_user.last_name %> </h2>
 </div>
 
+<div class="tabs">
+  <% if @tab == "client" %>
+    <a class="tab active" data-toggle="tab" href="#my-client" id="tabclient">
+  <% elsif @tab == "seller" %>
+    <a class="tab" data-toggle="tab" href="#my-client" id="tabclient">
+  <% else %>
+    <a class="tab active" data-toggle="tab" href="#my-client" id="tabclient">
+  <% end %>
+    <h3>Client</h3>
+  </a>
+
+  <% if @tab == "seller" %>
+    <a class="tab active" data-toggle="tab" href="#my-seller" id="tabseller">
+  <% elsif @tab == "seller" %>
+    <a class="tab" data-toggle="tab" href="#my-seller" id="tabseller">
+  <% else %>
+   <a class="tab" data-toggle="tab" href="#my-seller" id="tabseller">
+  <% end %>
+    <h3>Seller</h3>
+  </a>
+</div>
+
+<div class="tab-content">
+  <% if @tab == "client" %>
+    <div id="my-client" class="tab-pane fade in active content">
+  <% elsif @tab == "seller" %>
+    <div id="my-client" class="tab-pane fade in content">
+  <% else %>
+    <div id="my-client" class="tab-pane fade in active content">
+  <% end %>
+
+    <div class="cards-client" id="my_client">
+      <h1> Client </h1>
+      <%= render "cards_client", my_client: @my_client %>
+      <p></p>
+    </div>
+  </div>
+
+
+  <% if @tab == "seller" %>
+    <div id="my-seller" class="tab-pane fade in active content">
+  <% elsif @tab == "client" %>
+    <div id="my-seller" class="tab-pane fade in content">
+  <% else %>
+    <div id="my-seller" class="tab-pane fade in content">
+  <% end %>
+
+    <div class="cards-seller" id="my_seller">
+      <h1> Seller </h1>
+      <%= render "cards_seller", my_seller: @my_seller %>
+    </div>
+  </div>
+</div>
+
