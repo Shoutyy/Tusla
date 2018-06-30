@@ -1,4 +1,38 @@
 .btn-index {
-width: 200px;
-border-radius: 6px;
+  width: 200px;
+  border-radius: 6px;
+}
+
+.btn-profile-product {
+  background: transparent;
+  color: #062743;
+  width: 180px;
+  font-size: 16px;
+  border-radius: 25px;
+  border: 2px solid #062743;
+  font-family: "Montserrat";
+  text-align: center;
+  display: flex;
+  transition: all 0.5s ease;
+  margin-left: 6px;
+}
+
+.btn-profile-product:hover {
+  background-color: #062743;
+  color: white;
+}
+
+.btn-profile-product a {
+  text-decoration: none !important;
+  color: #062743;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 180px;
+  height: 40px;
+}
+
+.btn-profile-product:hover a {
+  text-decoration: none !important;
+  color: white;
 }

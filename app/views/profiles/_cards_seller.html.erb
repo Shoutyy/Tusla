@@ -1,3 +1,8 @@
+<p class="btn-profile-product">
+  <%= link_to new_product_path, method: :get do %>
+     <strong>+</strong>Nouveau produit
+  <% end %>
+</p>
 <div class="profile-main-container">
     <div class="profile-products">
       <% current_user.product.each do |c| %>
