@@ -1,0 +1,46 @@
+<div class="margin-top">
+</div>
+
+
+
+<div class="admin-title">
+  <h1> Demandes Produits </h1>
+</div>
+<div class="admin-container">
+  <div class="admin-cards">
+      <% @products.where(published: false).each do |product| %>
+          <div class="admin-card">
+              <div class="texte-admin">
+                <p><%= link_to product.name, product_path(product.id) %>,
+                <%= product.price %> €,
+                <%= product.description %>
+                <%= simple_form_for product, remote: true do |f| %>
+                  <%= f.input :published, as: :hidden, input_html: { value: true } %>
+                  <%= f.button :submit %>
+                <% end %>
+                <%= link_to "Delete", {:controller => :products, :action => 'destroy', :id => product.id }, :method => :delete %>
+              </p>
+              </div>
+          </div>
+      <% end %>
+    </div>
+</div>
+
+<div class="admin-title">
+  <h1> Produits </h1>
+</div>
+<div class="admin-container">
+    <div class="admin-cards">
+      <% @products.each do |product| %>
+          <div class="admin-card">
+              <div class="texte-admin">
+                <p><%= link_to product.name, product_path(product.id) %>,
+                <%= product.price %> €,
+                <%= product.description %>
+                <%= link_to "Delete", {:controller => :products, :action => 'destroy', :id => product.id }, :method => :delete %>
+              </p>
+              </div>
+          </div>
+      <% end %>
+    </div>
+</div>

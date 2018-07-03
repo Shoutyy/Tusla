@@ -27,6 +27,7 @@ Category.create(name: "Ingredient")
     description: Faker::Lorem.sentence,
     price: Random.rand(5..400),
     stock: Random.rand(0..50),
+    published: true,
     category: Category.last,
     user: new_user
     )
