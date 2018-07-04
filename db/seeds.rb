@@ -34,30 +34,3 @@ Category.create(name: "Ingredient")
     user: new_user
     )
 end
-
-private
-
-new_user = User.create(
-    first_name: "Raptor",
-    last_name: "Jesus",
-    email: "raptorjesus@gmail.com",
-    password: "pmolik",
-    admin: true,
-    seller: true
-    )
-new_user = User.create(
-    first_name: "Tyler",
-    last_name: "Durden",
-    email: "tylerdurdens@gmail.com",
-    password: "azerty",
-    admin: true,
-    seller: true
-    )
-new_user = User.create(
-    first_name: "Messire",
-    last_name: "Vanbesien",
-    email: "messirevanbesien@gmail.com",
-    password: "azerty",
-    admin: true,
-    seller: true
-    )
