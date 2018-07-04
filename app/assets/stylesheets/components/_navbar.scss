@@ -1,6 +1,6 @@
 /* Main navbar */
 .navbar-wagon {
-  background: white;
+  background: #674e3c;
   opacity: 0.9;
   filter: alpha(opacity=90);
   transition: all 0.3s ease;
@@ -37,7 +37,7 @@
 }
 
 .logout {
-  color: #674e3c;
+  color: white;
   font-size: 18px;
   transition: background-color 0.5s ease;
 }
@@ -48,15 +48,15 @@
 /* Basic navbar item */
 .navbar-wagon-link {
   font-size: 18px;
-  color: #674e3c;
+  color: white;
   transition: background-color 0.5s ease;
   margin-right: 40px;
   a {
-    color: #674e3c;
+    color: white;
   }
 }
 .navbar-wagon-link:hover {
-  color: #674e3c;
+  color: white;
 
 }
 
