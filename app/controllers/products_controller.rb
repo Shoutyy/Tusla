@@ -43,10 +43,12 @@ class ProductsController < ApplicationController
 
   def edit
     @product = Product.find(params[:id])
+    authorize @product
   end
 
   def update
     @product = Product.find(params[:id])
+    authorize @product
     if @product.update(product_params)
       @product.save
       redirect_to product_path(@product)
