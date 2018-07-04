@@ -5,7 +5,7 @@
   <% end %>
 
   <div class="dropdown">
-   <button class="dropbtn"><%= link_to "Products", products_path(category: nil) %></button>
+    <%= link_to "Products",products_path(category: nil), class: "navbar-wagon-link" %>
     <div class="dropdown-content">
       <%= link_to "Alimentaire", products_path(category: "Alimentaire") %>
       <%= link_to "Medicament", products_path(category: "Medicament") %>
