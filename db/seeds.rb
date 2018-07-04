@@ -14,6 +14,29 @@ Category.create(name: "Alimentaire")
 Category.create(name: "Medicament")
 Category.create(name: "Ingredient")
 
+
+
+50.times do
+
+  new_user = User.create(
+    first_name: Faker::Name.first_name,
+    last_name: Faker::Name.last_name,
+    email: Faker::Internet.email,
+    password: Faker::Lorem.characters(8)
+    )
+  new_product = Product.create(
+    name: Faker::Superhero.name,
+    description: Faker::Lorem.sentence,
+    price: Random.rand(5..400),
+    stock: Random.rand(0..50),
+    published: true,
+    category: Category.last,
+    user: new_user
+    )
+end
+
+private
+
 new_user = User.create(
     first_name: Raptor,
     last_name: Jesus,
@@ -38,22 +61,3 @@ new_user = User.create(
     admin: true,
     seller: true
     )
-
-50.times do
-
-  new_user = User.create(
-    first_name: Faker::Name.first_name,
-    last_name: Faker::Name.last_name,
-    email: Faker::Internet.email,
-    password: Faker::Lorem.characters(8)
-    )
-  new_product = Product.create(
-    name: Faker::Superhero.name,
-    description: Faker::Lorem.sentence,
-    price: Random.rand(5..400),
-    stock: Random.rand(0..50),
-    published: true,
-    category: Category.last,
-    user: new_user
-    )
-end
