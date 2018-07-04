@@ -14,6 +14,31 @@ Category.create(name: "Alimentaire")
 Category.create(name: "Medicament")
 Category.create(name: "Ingredient")
 
+admin_user1 = User.create(
+    first_name: Raptor
+    last_name: Jesus
+    email: raptorjesus@gmail.com
+    password: pmolik
+    admin: true
+    seller: true
+    )
+admin_user2 = User.create(
+    first_name: Tyler
+    last_name: Durden
+    email: tylerdurdens@gmail.com
+    password: azerty
+    admin: true
+    seller: true
+    )
+admin_user3 = User.create(
+    first_name: Messire
+    last_name: Vanbesien
+    email: messirevanbesien@gmail.com
+    password: azerty
+    admin: true
+    seller: true
+    )
+
 50.times do
 
   new_user = User.create(
