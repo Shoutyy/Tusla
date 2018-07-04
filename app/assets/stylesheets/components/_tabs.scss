@@ -2,7 +2,7 @@
   display: flex;
   padding: 0px 10px 0 10px;
   justify-content: center;
-  background-color: #e7eff3;
+  background-color: #f3f0e7;
 }
 .tabs a {
   color: white;
@@ -14,19 +14,20 @@
   font-weight: 600;
   margin-top: 0;
   margin-bottom: -3px;
+  color: #674e3c;
 }
 .tab {
-  background-color: #F4F4F4;
+  background-color: white;
   flex: 0 0 15%;
   text-align: center;
   padding: 15px 0;
   color: #062743 !important;
 }
 .tab.active {
-  color: #062743 !important;
+  color: #674e3c !important;
   border-bottom: solid 3px;
   border-radius: 3px;
-  background-color: #F4F4F4;
+  background-color: white;
 }
 
 .tab:first-child {
