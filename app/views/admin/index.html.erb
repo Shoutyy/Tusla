@@ -16,10 +16,9 @@
                 <%= product.description %>
                 <%= simple_form_for product, remote: true do |f| %>
                   <%= f.input :published, as: :hidden, input_html: { value: true } %>
-                  <%= f.button :submit %>
+                  <%= f.button :submit, "Published", class: "btn-admin" %>
                 <% end %>
-                <%= link_to "Delete", {:controller => :products, :action => 'destroy', :id => product.id }, :method => :delete %>
-              </p>
+                <%= link_to "Delete", {:controller => :products, :action => 'destroy', :id => product.id }, :method => :delete %></p>
               </div>
           </div>
       <% end %>
