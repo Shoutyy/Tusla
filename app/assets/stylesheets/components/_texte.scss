@@ -1,3 +1,6 @@
+body {
+  background-color: #FFFFFF !important;
+}
 .title-section {
   display: flex;
   text-align: center;
@@ -8,15 +11,18 @@
 .title-section h1 {
   font-size: 35px;
   font-weight: bold;
+  color: #674e3c;
 }
 
 .texte-home h2 {
   font-size: 25px;
   padding-left: 7px;
+  color: #755923;
 }
 
 .texte-home p {
   padding-left: 7px;
+  color: #674e3c;
 }
 
 .texte-index h2 {
@@ -25,17 +31,18 @@
 }
 
 .texte-index h2 a {
-  color: #4b7ead;
+  color: #755923;
   text-decoration: none;
 }
 
 .texte-index h2 a:hover{
-  color: #496f92;
+  color: #695021;
 }
 
 
 .texte-index p {
   padding-left: 7px;
+  color: #674e3c;
 }
 
 .texte-show {

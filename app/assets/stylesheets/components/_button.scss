@@ -9,7 +9,7 @@
   width: 180px;
   font-size: 16px;
   border-radius: 25px;
-  border: 2px solid #062743;
+  border: 2px solid #674e3c;
   font-family: "Montserrat";
   text-align: center;
   display: flex;
@@ -18,13 +18,13 @@
 }
 
 .btn-profile-product:hover {
-  background-color: #062743;
+  background-color: #674e3c;
   color: white;
 }
 
 .btn-profile-product a {
   text-decoration: none !important;
-  color: #062743;
+  color: #674e3c;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -44,4 +44,21 @@
 
 .edit_product {
   display: inline;
+}
+
+.submit {
+  background-image: linear-gradient(to right top, #b3a999, #b3a58f, #b2a186, #b29d7c, #b19973);
+  border: none;
+  width: 100%;
+  padding: 12px 20px;
+  border-radius: 25px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bolder;
+  color: white;
+  box-shadow: 0 2px 6px 0 #B3A999;
+}
+
+.submit:hover {
+  color: white !important;
 }

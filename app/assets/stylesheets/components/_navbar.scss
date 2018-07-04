@@ -1,6 +1,8 @@
 /* Main navbar */
 .navbar-wagon {
-  background: #8ea6b4;
+  background: white;
+  opacity: 0.9;
+  filter: alpha(opacity=90);
   transition: all 0.3s ease;
   height: 70px;
   padding: 0px 30px;
@@ -12,8 +14,8 @@
   left: 0px;
   right: 0px;
   z-index: 10;
+  box-shadow: 0 2px 1px 0 rgba(0,0,0,.25);
 }
-
 /* Logo */
 .navbar-wagon-brand img {
   height: 35px;
@@ -35,25 +37,26 @@
 }
 
 .logout {
-  color: white;
+  color: #674e3c;
+  font-size: 18px;
   transition: background-color 0.5s ease;
 }
 
 .logout:hover {
-  color: white;
+  color: #d4d3d3;
 }
 /* Basic navbar item */
 .navbar-wagon-link {
-  font-size: 14px;
-  color: white;
+  font-size: 18px;
+  color: #674e3c;
   transition: background-color 0.5s ease;
   margin-right: 40px;
   a {
-    color: white;
+    color: #674e3c;
   }
 }
 .navbar-wagon-link:hover {
-  color: white;
+  color: #674e3c;
 
 }
 
