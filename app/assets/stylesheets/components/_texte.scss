@@ -51,10 +51,12 @@ body {
 .texte-show h2 {
   font-size: 25px;
   padding-left: 7px;
+  color: #755923;
 }
 
 .texte-show p {
   padding-left: 7px;
+  color: #674e3c;
 }
 
 .description-show  {
@@ -64,12 +66,16 @@ body {
  margin: 10px 50px;
  border: solid;
  border-size: 1px;
- border-color: #e7e6e1;
+ border-color: #f3f0e7;
  padding: 0px 10px;
 }
 
 .description-show h2 {
  text-align: center;
+ color: #755923;
+}
+.description-show p {
+  color: #674e3c;
 }
 
 .texte-profile-card {
