@@ -6,7 +6,7 @@
     <%= form_tag products_path, method: "get", id: "search-products-form" do %>
       <%= text_field_tag :name, params[:name], class: "form-control",
       placeholder: "Search for a product", id: 'searchbar-products', value: params[:name] %>
-      <%= select_tag :category, options_for_select([["Any category", nil], "Alimentaire", "Medicament", "Ingredient"], params[:category]) %>
+      <%= select_tag :category, options_for_select([["Any category", nil], "Alimentaire", "Medicament", "Ingredient"], params[:category])%>
       <%= submit_tag "Filter", class: "btn-index" %>
     <% end %>
 </div>
