@@ -1,45 +1,98 @@
 <div class="margin-top">
 </div>
 
-
-
-<div class="admin-title">
-  <h1> Demandes Produits </h1>
+<div class="profile-title">
+  <h2> Admin Section </h2>
 </div>
-<div class="admin-container">
-  <div class="admin-cards">
-      <% @products.where(published: false).each do |product| %>
-          <div class="admin-card">
-              <div class="texte-admin">
-                <p><%= link_to product.name, product_path(product.id) %>,
-                <%= product.price %> €,
-                <%= product.description %>
-                <%= simple_form_for product, remote: true do |f| %>
-                  <%= f.input :published, as: :hidden, input_html: { value: true } %>
-                  <%= f.button :submit, "Published", class: "btn-admin" %>
-                <% end %>
-                <%= link_to "Delete", {:controller => :products, :action => 'destroy', :id => product.id }, :method => :delete %></p>
-              </div>
-          </div>
-      <% end %>
+
+<div class="tabs">
+  <% if @tab == "products" %>
+    <a class="tab active" data-toggle="tab" href="#my-products" id="tabproducts">
+  <% elsif @tab == "published" %>
+    <a class="tab" data-toggle="tab" href="#my-products" id="tabproducts">
+  <% elsif @tab == "users" %>
+    <a class="tab" data-toggle="tab" href="#my-products" id="tabproducts">
+  <% else %>
+    <a class="tab active" data-toggle="tab" href="#my-products" id="tabproducts">
+  <% end %>
+    <h3>Products</h3>
+    </a>
+
+  <% if @tab == "published" %>
+    <a class="tab active" data-toggle="tab" href="#my-published" id="tabpublished">
+  <% elsif @tab == "products" %>
+    <a class="tab" data-toggle="tab" href="#my-published" id="tabpublished">
+  <% elsif @tab == "users" %>
+    <a class="tab" data-toggle="tab" href="#my-published" id="tabpublished">
+  <% else %>
+    <a class="tab" data-toggle="tab" href="#my-published" id="tabspublished">
+  <% end %>
+    <h3>Published</h3>
+    </a>
+
+
+  <% if @tab == "users" %>
+    <a class="tab active" data-toggle="tab" href="#my-users" id="tabusers">
+  <% elsif @tab == "published" %>
+    <a class="tab" data-toggle="tab" href="#my-users" id="tabusers">
+  <% elsif @tab == "products" %>
+    <a class="tab" data-toggle="tab" href="#my-users" id="tabusers">
+  <% else %>
+    <a class="tab" data-toggle="tab" href="#my-users" id="tabusers">
+  <% end %>
+    <h3>Users</h3>
+    </a>
+</div>
+
+<div class="tab-content">
+  <% if @tab == "products" %>
+    <div id="my-products" class="tab-pane fade in active content">
+  <% elsif @tab == "published" %>
+    <div id="my-products" class="tab-pane fade in content">
+  <% elsif @tab == "users" %>
+    <div id="my-products" class="tab-pane fade in content">
+  <% else %>
+    <div id="my-products" class="tab-pane fade in active content">
+  <% end %>
+
+    <div class="cards-products" id="my_products">
+      <%= render "cards_products", my_products: @my_cproducts %>
+      <p></p>
     </div>
+  </div>
+
+
+  <% if @tab == "published" %>
+    <div id="my-published" class="tab-pane fade in active content">
+  <% elsif @tab == "products" %>
+    <div id="my-published" class="tab-pane fade in content">
+  <% elsif @tab == "users" %>
+    <div id="my-published" class="tab-pane fade in content">
+  <% else %>
+    <div id="my-published" class="tab-pane fade in content">
+  <% end %>
+
+    <div class="cards-published" id="my_published">
+      <%= render "cards_published", my_published: @my_published %>
+    </div>
+  </div>
+
+  <% if @tab == "users" %>
+    <div id="my-users" class="tab-pane fade in active content">
+  <% elsif @tab == "products" %>
+    <div id="my-users" class="tab-pane fade in content">
+  <% elsif @tab == "published" %>
+    <div id="my-users" class="tab-pane fade in content">
+  <% else %>
+    <div id="my-users" class="tab-pane fade in content">
+  <% end %>
+
+    <div class="cards-users" id="my_users">
+      <%= render "cards_users", my_users: @my_users %>
+      <p></p>
+    </div>
+  </div>
 </div>
 
-<div class="admin-title">
-  <h1> Produits </h1>
-</div>
-<div class="admin-container">
-    <div class="admin-cards">
-      <% @products.each do |product| %>
-          <div class="admin-card">
-              <div class="texte-admin">
-                <p><%= link_to product.name, product_path(product.id) %>,
-                <%= product.price %> €,
-                <%= product.description %>
-                <%= link_to "Delete", {:controller => :products, :action => 'destroy', :id => product.id }, :method => :delete %>
-              </p>
-              </div>
-          </div>
-      <% end %>
-    </div>
-</div>
+
+
