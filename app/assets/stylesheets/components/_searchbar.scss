@@ -15,14 +15,15 @@
   color: #000000;
   background-color: #fff;
   background-image: none;
-  border: 1px solid #ccc;
+  border: 1px solid #a59285;
   border-radius: 2px;
   box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
 
 #searchbar-products {
-  border-radius: 6px;
+  border-radius: 5px;
+  margin: 2px;
 }
 
 #search-products-form {
@@ -32,4 +33,10 @@
 
 .margin-top {
   height: 70px;
+}
+
+#category {
+  background-color: white;
+  margin: 2px;
+  border-color: #a59285
 }
