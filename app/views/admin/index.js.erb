@@ -1,0 +1,18 @@
+function myProducts() {
+  const my_products = document.getElementById("my_products");
+  my_products.innerHTML = "<%= j render 'cards_products', my_products: @my_products %>";
+}
+
+function myPublished() {
+  const my_published = document.getElementById("my_published");
+  my_published.innerHTML = "<%= j render 'cards_published', my_published: @my_published %>";
+}
+
+function myUsers() {
+  const my_users = document.getElementById("my_users");
+  my_users.innerHTML = "<%= j render 'cards_users', my_users: @my_users %>";
+}
+
+myProducts();
+myPublished();
+myUsers();

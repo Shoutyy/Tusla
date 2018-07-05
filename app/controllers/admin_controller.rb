@@ -4,6 +4,7 @@ class AdminController < ApplicationController
   def index
     authorize :admin
     @products = Product.all
+    @users = User.all
   end
 
 end
