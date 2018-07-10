@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   get 'profile', to: 'profiles#show'
 
+  resource :cart, only: [:show]
+  resources :order_items
   resources :admin
   resources :profile, only: :show
   resources :products

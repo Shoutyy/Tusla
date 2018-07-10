@@ -17,10 +17,12 @@ class ProductsController < ApplicationController
     else
       @products = Product.where(published: true).search_products(search_options)
     end
+    @order_item = current_order.order_item.new
   end
 
   def show
     @product = Product.where(published: true).find(params[:id])
+    @order_item = current_order.order_item.new
     authorize @product
   end
 

@@ -1,0 +1,30 @@
+.cart-container {
+  width: 80vw !important;
+  margin-top: 10px;
+}
+
+.cart-main-container {
+  display: flex;
+  justify-content: center;
+}
+
+.cart-card {
+  border: solid 1px #a59285;
+  margin: 5px;
+  padding: 0px 6px;
+  border-radius: 5px;
+}
+
+.cart-card h2 {
+  font-size: 26px;
+  margin: 0px;
+}
+
+.cart-card p {
+  font-size: 18px;
+  margin: 2px;
+}
+
+.cart-total {
+  margin-left: 6px;
+}
