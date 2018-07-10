@@ -26,6 +26,17 @@
   margin: 2px;
 }
 
+#new_order_item {
+  color: #674e3c !important;
+}
+
+#order_item_quantity{
+  border: 1px solid #a59285;
+  border-radius: 5px;
+  color: #674e3c;
+  max-width: 200px;
+}
+
 #search-products-form {
   display: flex;
   justify-content: center;

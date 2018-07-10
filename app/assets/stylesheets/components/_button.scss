@@ -1,8 +1,17 @@
 .btn-index {
   width: 200px;
   border-radius: 5px;
-  margin: 2px;
   border-color: #a59285;
+  margin: 2px 0px;
+}
+
+.btn-cart {
+  width: 200px;
+  border: 0px;
+  border-radius: 5px;
+  color: white;
+  margin: 2px 0px;
+  background-image: linear-gradient(to right top, #b3a999, #b3a58f, #b2a186, #b29d7c, #b19973);
 }
 
 .btn-profile-product {

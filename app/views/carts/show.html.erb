@@ -1,0 +1,28 @@
+<div class="margin-top">
+</div>
+<div class="cart-main-container">
+  <div class="cart-container">
+    <div class="texte-cart">
+      <% if @order_items.any? %>
+        <% @order_items.each do |item| %>
+          <div class="cart-card">
+            <h2><%= item.product.name %></h2>
+            <%= form_for item do |f| %>
+              <p><%= number_to_currency (item.product.price * item.quantity) %>
+              (<%= number_to_currency item.product.price %>/u)</p>
+              <p><%= f.number_field :quantity, value: item.quantity.to_i, class: "form-control", min: 1 %>
+              <%= f.hidden_field :product_id, value: item.product.id %>
+                <%= f.submit "Update Quantity", class: "btn-cart" %>
+                <%= link_to "Supprimer", item, { data: { confirm: "Are you sure you wish to delete the product '#{item.product.name}' from your cart?" }, method: :delete, remote: true } %></p>
+            <% end %>
+          </div>
+        <% end %>
+        <div class="cart-total">
+          <p><strong>Your Total: <%= number_to_currency current_order.total %></strong></p>
+        </div>
+      <% else %>
+        <p>There are no items in your shopping cart.  Please <%= link_to "go back", products_path %> and add some items to your cart.</p>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -18,6 +18,7 @@
 
     <% if user_signed_in? %>
 
+      <%= link_to "#{current_order.order_item.size} Items in Cart", cart_path, class: "btn btn-link" %>
       <!-- Links when logged in -->
       <% if current_user.admin? %>
       <%= link_to "Admin", "/admin", class: "navbar-wagon-item navbar-wagon-link" %>

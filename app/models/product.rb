@@ -13,6 +13,7 @@ using: {
 
 belongs_to :user
 belongs_to :category
+has_many :order_item, dependent: :destroy
 
 validates :user, :category, :name, :price, :description, :stock, presence: true
 
