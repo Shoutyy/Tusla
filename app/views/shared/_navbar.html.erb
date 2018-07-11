@@ -4,21 +4,21 @@
     <%= image_tag "logo.png", height: 50 %>
   <% end %>
 
-  <div class="dropdown">
-        <%= link_to "Produits", products_path(category: nil), class: "navbar-wagon-link" %>
-    <div class="dropdown-content">
-      <%= link_to "Alimentaire", products_path(category: "Alimentaire") %>
-      <%= link_to "Medicament", products_path(category: "Medicament") %>
-      <%= link_to "Ingredient", products_path(category: "Ingredient") %>
-    </div>
-  </div>
 
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
+    <div class="dropdown">
+          <%= link_to "Produits", products_path(category: nil), class: "navbar-wagon-link" %>
+      <div class="dropdown-content">
+        <%= link_to "Alimentaire", products_path(category: "Alimentaire") %>
+        <%= link_to "Medicament", products_path(category: "Medicament") %>
+        <%= link_to "Ingredient", products_path(category: "Ingredient") %>
+      </div>
+    </div>
 
     <% if user_signed_in? %>
 
-      <%= link_to "#{current_order.order_item.size} Produits dans le panier", cart_path, class: "btn btn-link" %>
+      <%= link_to "#{current_order.order_item.size} Panier", cart_path, class: "fas fa-shopping-cart" %>
       <!-- Links when logged in -->
       <% if current_user.admin? %>
       <%= link_to "Admin", "/admin", class: "navbar-wagon-item navbar-wagon-link" %>
