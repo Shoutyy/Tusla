@@ -8,13 +8,12 @@
               <div class="texte-admin">
                 <p><%= link_to product.name, product_path(product.id) %>,
                 <%= product.price %> €,
-                <%= product.description %>,
+                <%= product.description %>
                 <% if product.published? %>
                 <% else %>
-                  <%= "Not published, " %>
-                <% end %>
+                  <%= "Pas publier, " %>
+                <% end %></p>
                 <%= link_to "Delete", {:controller => :products, :action => 'destroy', :id => product.id }, :method => :delete %>
-              </p>
               </div>
           </div>
       <% end %>
