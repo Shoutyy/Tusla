@@ -6,35 +6,35 @@
       <h2> Bonne pratique </h2>
       <div class="new-li">
         <li> Produit a base de cdb </li>
-        <li> Pas de beuteu en photo </li>
-        <li> Blablabla </li>
+        <li> Produit contenant - de 0,2% de thc </li>
+        <li> Le produit sera publier après verification </li>
         <li> More blabla </li>
         <li> Coucou </li>
       </div>
     </div>
   </div>
   <div class="title-new">
-    <h1>Add a new product</h1>
+    <h1>Ajouter un nouveau produit</h1>
   </div>
   <div class="new-input">
     <% if @product.errors.any? %>
     <div class="errors-container">
       <ul>
         <% @product.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+          <li><%= message %></li>
         <% end %>
       </ul>
     </div>
     <% end %>
     <%= simple_form_for @product do |f| %>
-    <%= f.input :name %>
-    <%= f.input :price %>
-    <%= f.input :description %>
-    <%= f.input :stock %>
-    <%= f.association :category, as: :radio_buttons %>
-    <%= f.input :photo %>
-    <%= f.input :photo_cache, as: :hidden %>
-    <%= f.submit class: "btn btn-green form-control" %>
+      <%= f.input :name, label: 'Nom du produit' %>
+      <%= f.input :price, label: 'Prix' %>
+      <%= f.input :description, label: 'Description' %>
+      <%= f.input :stock, label: 'Stock' %>
+      <%= f.association :category, as: :radio_buttons, label: 'Category' %>
+      <%= f.input :photo, label: 'Photo du produit' %>
+      <%= f.input :photo_cache, as: :hidden %>
+      <%= f.submit class: "btn-index" %>
     <% end %>
   </div>
 </div>

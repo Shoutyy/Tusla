@@ -5,7 +5,7 @@
   <% end %>
 
   <div class="dropdown">
-        <%= link_to "Products", products_path(category: nil), class: "navbar-wagon-link" %>
+        <%= link_to "Produits", products_path(category: nil), class: "navbar-wagon-link" %>
     <div class="dropdown-content">
       <%= link_to "Alimentaire", products_path(category: "Alimentaire") %>
       <%= link_to "Medicament", products_path(category: "Medicament") %>
@@ -18,7 +18,7 @@
 
     <% if user_signed_in? %>
 
-      <%= link_to "#{current_order.order_item.size} Items in Cart", cart_path, class: "btn btn-link" %>
+      <%= link_to "#{current_order.order_item.size} Produits dans le panier", cart_path, class: "btn btn-link" %>
       <!-- Links when logged in -->
       <% if current_user.admin? %>
       <%= link_to "Admin", "/admin", class: "navbar-wagon-item navbar-wagon-link" %>
@@ -27,13 +27,13 @@
       <%= link_to "Home", "/", class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to "Profile", "/profile", class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to destroy_user_session_path, method: :delete, class: "navbar-wagon-item navbar-wagon-link" do %>
-        <%= t(".sign_out", default: "Log out") %>
+        <%= t(".sign_out", default: "Deconnexion") %>
       <% end %>
 
       <% else %>
       <!-- Login link (when logged out) -->
       <%= link_to "Home", "/", class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to t(".sign_in", default: "Connexion"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
       <% end %>
   </div>
 
