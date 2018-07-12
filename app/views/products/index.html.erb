@@ -5,9 +5,9 @@
 <div class="searchbar-index">
     <%= form_tag products_path, method: "get", id: "search-products-form" do %>
       <%= text_field_tag :name, params[:name], class: "form-control",
-      placeholder: "Search for a product", id: 'searchbar-products', value: params[:name] %>
-      <%= select_tag :category, options_for_select([["Any category", nil], "Alimentaire", "Medicament", "Ingredient"], params[:category])%>
-      <%= submit_tag "Filter", class: "btn-index" %>
+      placeholder: "Rechercher un produit", id: 'searchbar-products', value: params[:name] %>
+      <%= select_tag :category, options_for_select([["Toute catégorie", nil], "Alimentaire", "Medicament", "Ingredient"], params[:category])%>
+      <%= submit_tag "Filtrer", class: "btn-index" %>
     <% end %>
 </div>
 
@@ -24,9 +24,8 @@
               <% end %>
               <div class="texte-index">
                 <h2><%= link_to product.name, product_path(product.id) %></h2>
-                <p><%= product.price %> €</p>
-                <p><%= product.category.name %></p>
                 <p><%= product.description %></p>
+                <p><%= product.price %> €</p>
                 <%= form_for @order_item do |f| %>
                   <%= f.hidden_field :product_id, value: product.id %>
                   <p><%= f.number_field :quantity %>
