@@ -42,7 +42,7 @@ class ApplicationController < ActionController::Base
   end
 
   def user_not_authorized
-    flash[:alert] = "You are not cool enough to do this - go back from whence you came."
+    flash[:alert] = "Vous n'êtes pas assez cool pour faire cela - revenez d'où vous venez."
     redirect_to(products_path)
   end
 

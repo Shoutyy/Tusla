@@ -1,7 +1,7 @@
 class ProductPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
-      scope.all
+      scope
     end
   end
 
@@ -10,7 +10,9 @@ class ProductPolicy < ApplicationPolicy
   end
 
   def create?
-    true
+    if user.seller?
+      true
+    end
   end
 
   def update?

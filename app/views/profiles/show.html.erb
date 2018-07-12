@@ -55,7 +55,11 @@
 
     <div class="cards-seller" id="my_seller">
       <h1> Seller </h1>
-      <%= render "cards_seller", my_seller: @my_seller %>
+      <% if current_user.seller? %>
+        <%= render "cards_seller", my_seller: @my_seller %>
+      <% else %>
+        <p class="fas fa-lock">Cette section est réservée au fournisseur</p>
+      <% end %>
     </div>
   </div>
 </div>
