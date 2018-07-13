@@ -51,9 +51,25 @@ class ProductsController < ApplicationController
   def update
     @product = Product.find(params[:id])
     authorize @product
-    if @product.update(product_params)
-      @product.save
-      redirect_to product_path(@product)
+    @product.update(product_params)
+    if @product.save || current_user.admin?
+      respond_to do |format|
+        format.html { redirect_to '/admin' }
+        format.js  do
+          if params[:product][:stock]
+            render 'profiles/show.js.erb'
+          end
+        end
+      end
+    elsif @product.save
+      respond_to do |format|
+        format.html { redirect_to product_path(@product) }
+        format.js  do
+          if params[:product][:stock]
+            render 'profiles/show.js.erb'
+          end
+        end
+      end
     else
       render :edit
     end
