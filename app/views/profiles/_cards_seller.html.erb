@@ -1,3 +1,4 @@
+<h1> Fournisseur </h1>
 <p class="btn-profile-product">
   <%= link_to new_product_path, method: :get do %>
      <strong>+</strong>Nouveau produit
@@ -10,10 +11,15 @@
             <div class="photo-product-card" style="background: url('https://images.unsplash.com/photo-1503262028195-93c528f03218?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=c3f919b2d1bf7d9a8d2746781dbea799&auto=format&fit=crop&w=1651&q=80');">
             </div>
             <div class="texte-profile-card">
-              <p>Product's name : <%= c.name %></p>
-              <p>Product's description : <%= c.description %></p>
-              <p>Product's price : <%= c.price %></p>
-              <p>Product's stock : <%= c.stock %></p>
+              <p>Nom du produit : <%= c.name %></p>
+              <p>Descritpion du produit : <%= c.description %></p>
+              <p>Prix du produit : <%= c.price %>€</p>
+              <p>Stock restant : <%= c.stock %></p>
+              <%= form_for c, remote: true do |product| %>
+              <p><%= product.number_field :stock, value: c.stock.to_i, class: "form-control profile-stock" %>
+              <%= product.hidden_field :product_id, value: c.id %>
+              <%= product.submit "Mettre a jour le stock", class: "btn-cart" %></p>
+            <% end %>
             </div>
         </div>
       <% end %>

@@ -45,9 +45,6 @@ body {
   color: #674e3c;
 }
 
-.texte-show {
- width: 400px;
-}
 .texte-show h2 {
   font-size: 25px;
   padding-left: 7px;
@@ -90,10 +87,21 @@ body {
 .texte-admin p{
   margin: 4px !important;
   display: inline-flex;
+  color: #674e3c;
 }
 
 .texte-cart {
   padding-left: 7px;
   color: #674e3c;
   margin: 2px !important;
+}
+.publier {
+  color: #19d419 !important;
+}
+.npublier {
+  color: red !important;
+}
+
+.admin-title {
+  color: #674e3c;
 }

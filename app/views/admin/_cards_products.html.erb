@@ -10,8 +10,9 @@
                 <%= product.price %> €,
                 <%= product.description %>
                 <% if product.published? %>
+                  <p class="publier"><%= "[Publier] " %></p>
                 <% else %>
-                  <%= "Pas publier, " %>
+                  <p class="npublier"><%= "[Pas publier] " %></p>
                 <% end %></p>
                 <%= link_to "Delete", {:controller => :products, :action => 'destroy', :id => product.id }, :method => :delete %>
               </div>

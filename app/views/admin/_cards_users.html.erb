@@ -2,15 +2,15 @@
   <h1> Utilisateur </h1>
 </div>
 <div class="admin-container">
-  <div class="admin-cards">
+    <div class="admin-cards">
       <% @users.each do |user| %>
           <div class="admin-card">
               <div class="texte-admin">
-                <p>Name:<%= user.first_name %>
+                <p><%= user.first_name %>
                 <%= user.last_name %>,
-                Email:<%= user.email %>,
+                <%= user.email %>,
                 <%= user.id %></p>
-                <%= link_to "Destroy", admin_destroy_user_path(user), method: :delete, data: { confirm: "You sure?" } %></p>
+                <%= link_to "Delete", admin_destroy_user_path(user), method: :delete, data: { confirm: "You sure?" } %>
               </div>
           </div>
       <% end %>

@@ -38,16 +38,21 @@
   margin: 3px 3px 7px 3px;
   display: flex;
   align-items: center;
-  height: 150px;
-  width: 800px;
+  height: 230px;
   color: #674e3c;
 }
 
 .profile-product-card p {
   margin-bottom: 0px;
+  padding: 3px 10px;
 }
 
 .fa-lock {
   margin-left: 10px;
   color: #674e3c;
+}
+
+.profile-stock {
+  width: 200px !important;
+  border-radius: 5px;
 }

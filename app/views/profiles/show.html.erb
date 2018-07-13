@@ -3,7 +3,7 @@
 
 
 <div class="profile-title">
-  <h2> Hello, <%= current_user.first_name %> <%= current_user.last_name %> </h2>
+  <h2> Bonjour, <%= current_user.first_name %> <%= current_user.last_name %> </h2>
 </div>
 
 <div class="tabs">
@@ -24,7 +24,7 @@
   <% else %>
     <a class="tab" data-toggle="tab" href="#my-seller" id="tabseller">
   <% end %>
-    <h3>Seller</h3>
+    <h3>Fournisseur</h3>
     </a>
 </div>
 
@@ -38,7 +38,6 @@
   <% end %>
 
     <div class="cards-client" id="my_client">
-      <h1> Client </h1>
       <%= render "cards_client", my_client: @my_client %>
       <p></p>
     </div>
@@ -54,7 +53,6 @@
   <% end %>
 
     <div class="cards-seller" id="my_seller">
-      <h1> Seller </h1>
       <% if current_user.seller? %>
         <%= render "cards_seller", my_seller: @my_seller %>
       <% else %>
