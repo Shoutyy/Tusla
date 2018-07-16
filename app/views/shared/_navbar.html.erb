@@ -1,7 +1,7 @@
 <div class="navbar-wagon">
   <!-- Logo -->
   <%= link_to root_path, class: "navbar-wagon-brand" do %>
-    <%= image_tag "logo.png", height: 50 %>
+    <%= image_tag "Vault_Boy_.png", height: 65 %>
   <% end %>
 
 
@@ -24,16 +24,14 @@
       <%= link_to "Admin", "/admin", class: "navbar-wagon-item navbar-wagon-link" %>
       <% end %>
 
-      <%= link_to "Home", "/", class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to "Profile", "/profile", class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to destroy_user_session_path, method: :delete, class: "navbar-wagon-item navbar-wagon-link" do %>
+      <%= link_to destroy_user_session_path, method: :delete, class: "fas fa-user" do %>
         <%= t(".sign_out", default: "Deconnexion") %>
       <% end %>
 
       <% else %>
       <!-- Login link (when logged out) -->
-      <%= link_to "Home", "/", class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to t(".sign_in", default: "Connexion"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to t(".sign_in", default: "Connexion"), new_user_session_path, class: "fas fa-user" %>
       <% end %>
   </div>
 

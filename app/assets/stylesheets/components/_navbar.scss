@@ -18,7 +18,7 @@
 }
 /* Logo */
 .navbar-wagon-brand img {
-  height: 35px;
+  height: 50px;
 }
 
 /* User Avatar */
@@ -38,7 +38,7 @@
 
 /* Basic navbar item */
 .navbar-wagon-link {
-  font-size: 18px;
+  font-size: 22px;
   color: #674e3c;
   transition: background-color 0.5s ease;
   margin-right: 40px;
@@ -82,21 +82,43 @@
 }
 
 .fa-shopping-cart {
-  font-size: 20px;
+  font-size: 22px;
   color: #674e3c;
   transition: background-color 0.5s ease;
+  font-family: "eurofluence";
   margin-right: 40px;
   a {
     color: #674e3c;
   }
 }
 
+.fa-shopping-cart::before {
+  font-family: 'Font Awesome 5 Free' !important;
+  margin-right: 2px;
+}
+
 .fa-shopping-cart:hover {
   color: #674e3c;
 }
 
-.fa-shopping-cart:before {
+.fa-user {
+  font-size: 22px;
+  color: #674e3c;
+  transition: background-color 0.5s ease;
+  font-family: "eurofluence";
+  margin-right: 40px;
+  a {
+    color: #674e3c;
+  }
+}
+
+.fa-user::before {
+  font-family: 'Font Awesome 5 Free' !important;
   margin-right: 2px;
+}
+
+.fa-user:hover {
+  color: #674e3c;
 }
 
 .navbar-wagon-burger {

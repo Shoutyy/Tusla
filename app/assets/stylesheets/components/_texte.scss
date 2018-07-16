@@ -1,5 +1,5 @@
 body {
-  background-color: #FFFFFF !important;
+  background-color: #f6f6f6;
 }
 .title-section {
   display: flex;
@@ -31,18 +31,21 @@ body {
 }
 
 .texte-index h2 a {
-  color: #755923;
+  color: #32a560;
   text-decoration: none;
+  font-size: 30px;
 }
 
 .texte-index h2 a:hover{
-  color: #695021;
+  color: #24d86c;
 }
 
 
 .texte-index p {
   padding-left: 7px;
   color: #674e3c;
+  height: 45px;
+  margin: 5px 0 0;
 }
 
 .texte-show h2 {
@@ -54,17 +57,6 @@ body {
 .texte-show p {
   padding-left: 7px;
   color: #674e3c;
-}
-
-.description-show  {
- display: flex;
- justify-content: center;
- flex-direction: column;
- margin: 10px 50px;
- border: solid;
- border-size: 1px;
- border-color: #f3f0e7;
- padding: 0px 10px;
 }
 
 .description-show h2 {
@@ -83,6 +75,7 @@ body {
   border: solid 1px;
   margin: 1px 0px;
   padding: 0px 10px;
+  background-color: white;
 }
 .texte-admin p{
   margin: 4px !important;

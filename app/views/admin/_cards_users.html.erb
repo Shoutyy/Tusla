@@ -10,6 +10,17 @@
                 <%= user.last_name %>,
                 <%= user.email %>,
                 <%= user.id %></p>
+                <% if user.seller? %>
+                  <%= simple_form_for user do |f| %>
+                    <%= f.input :seller, as: :hidden, input_html: { value: false } %>
+                    <%= f.button :submit, "NotSeller", class: "btn-admin" %>
+                  <% end %>
+                <% else %>
+                  <%= simple_form_for user do |f| %>
+                    <%= f.input :seller, as: :hidden, input_html: { value: true } %>
+                    <%= f.button :submit, "Seller", class: "btn-admin" %>
+                  <% end %>
+                <% end %>
                 <%= link_to "Delete", admin_destroy_user_path(user), method: :delete, data: { confirm: "You sure?" } %>
               </div>
           </div>
