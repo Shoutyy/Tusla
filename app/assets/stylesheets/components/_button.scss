@@ -22,7 +22,7 @@
 }
 
 .btn-profile-product {
-  background: transparent;
+  background: white;
   color: #062743;
   width: 180px;
   font-size: 16px;
@@ -81,4 +81,25 @@
 
 .submit:hover {
   color: white !important;
+}
+
+.banner-btn {
+  background: transparent;
+  color: white;
+  width: 220px;
+  font-size: 22px;
+  border-radius: 25px;
+  border: 2px solid white;
+  box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
+  padding: 10px 50px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  transition: all 0.5s ease;
+}
+
+.banner-btn:hover {
+  background-color: white;
+  color: #674e3c;
+  box-shadow: 2px 4px 16px rgba(0,0,0,0.2);
 }
