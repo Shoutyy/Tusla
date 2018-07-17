@@ -48,17 +48,14 @@
           <% if current_user.admin? %>
           <%= link_to "Admin", "/admin", class: "navbar-wagon-burger" %>
           <% end %>
-
-          <%= link_to "Home", "/", class: "navbar-wagon-burger" %>
           <%= link_to "Profile", "/profile", class: "navbar-wagon-burger" %>
-          <%= link_to destroy_user_session_path, method: :delete, class: "navbar-wagon-burger" do %>
+          <%= link_to destroy_user_session_path, method: :delete, class: "fas fa-user navbar-wagon-burger" do %>
             <%= t(".sign_out", default: "Deconnexion") %>
           <% end %>
 
         <% else %>
           <!-- Login link (when logged out) -->
-          <%= link_to "Home", "/", class: "navbar-wagon-burger" %>
-          <%= link_to t(".sign_in", default: "Connexion"), new_user_session_path, class: "navbar-wagon-burger" %>
+          <%= link_to t(".sign_in", default: "Connexion"), new_user_session_path, class: "fas fa-user navbar-wagon-burger" %>
         <% end %>
       </ul>
     </div>

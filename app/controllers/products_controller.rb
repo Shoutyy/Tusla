@@ -21,7 +21,11 @@ class ProductsController < ApplicationController
   end
 
   def show
-    @product = Product.where(published: true).find(params[:id])
+    if current_user.admin?
+      @product = Product.find(params[:id])
+    else
+      @product = Product.where(published: true).find(params[:id])
+    end
     @order_item = current_order.order_item.new
     authorize @product
   end
