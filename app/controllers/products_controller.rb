@@ -21,10 +21,10 @@ class ProductsController < ApplicationController
   end
 
   def show
-    if current_user.admin?
-      @product = Product.find(params[:id])
-    else
+    unless user_signed_in?
       @product = Product.where(published: true).find(params[:id])
+    else user_signed_in? && current_user.admin?
+      @product = Product.find(params[:id])
     end
     @review = Review.new
     @order_item = current_order.order_item.new
