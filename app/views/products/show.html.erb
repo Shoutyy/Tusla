@@ -36,4 +36,53 @@
         </div>
     </div>
   </div>
+  <div class="container-review">
+    <div class ="container-card-review">
+      <div class="container-title-review">
+        <h2 class="title-comments">Commentaires(<%= @product.reviews.count %>)</h2>
+      </div>
+      <p class="average-rating"><strong><%= @product.name %> has an average rating of
+        <% average = @product.reviews.average("rating") %>
+        <% if (average / average.floor) == 1 %>
+          <%= average.round %>/5
+        <% else %>
+          <%= average.round(1) %>/5
+        <% end %></strong>
+      </p>
+      <div class="posted-review">
+        <% if @product.reviews.any? %>
+          <% @product.reviews.each do |r| %>
+            <div class="review-card">
+              <div class="review-name">
+                <h4><%= current_user.first_name %></h4>
+              </div>
+              <div class="review-body">
+                <p><%= r.content %></p>
+              </div>
+              <div class="review-rating">
+                <p>Rating</p>
+                <p><%= r.rating %>/5</p>
+              </div>
+          </div>
+          <% end %>
+        <% else %>
+          <p class="no-comments">There are no comments yet.</p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="container-posted">
+    <div class="posted-message">
+      <div class="form-review">
+        <h3><strong>Add a review :</strong></h3>
+        <%= simple_form_for [ @product, @review ] do |f| %>
+          <%= f.input :rating %>
+          <%= f.input :content, as: :text, label: "Your review" %>
+          <%= f.submit "Add a review", class: "submit" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>
+
+
