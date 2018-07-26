@@ -26,6 +26,7 @@ class ProductsController < ApplicationController
     else
       @product = Product.where(published: true).find(params[:id])
     end
+    @review = Review.new
     @order_item = current_order.order_item.new
     authorize @product
   end

@@ -1,0 +1,74 @@
+.container-review {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-card-review{
+  background-color: white;
+  width: 1100px;
+  color: #674e3c;
+}
+
+.container-posted {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.posted-message {
+  background-color: white;
+  width: 1100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.form-review {
+  width: 760px;
+  color: #674e3c;
+}
+
+.review-name {
+  width: 200px;
+  padding-left: 30px;
+}
+
+.review-name p {
+  margin: 0px;
+}
+
+.review-card {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(220,224,244,0.4);
+  padding: 0px 10px 10px 10px;
+}
+
+.container-title-review{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.average-rating {
+  padding-left: 40px;
+}
+
+.review-body {
+  flex-grow: 1;
+}
+
+.review-body p{
+  margin: 0px;
+}
+
+.review-rating {
+  padding-right: 30px;
+}
+
+.review-rating p{
+  margin: 0px !important;
+}
+

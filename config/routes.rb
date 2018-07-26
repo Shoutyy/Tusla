@@ -10,7 +10,9 @@ Rails.application.routes.draw do
   resources :order_items
   resources :admin
   resources :profile, only: :show
-  resources :products
+  resources :products do
+    resources :reviews, only: :create
+  end
   resources :categories
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
