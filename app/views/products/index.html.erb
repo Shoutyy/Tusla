@@ -1,11 +1,11 @@
-<!-- <div class="searchbar-index">
+<div class="searchbar-index">
     <%= form_tag products_path, method: "get", id: "search-products-form" do %>
       <%= text_field_tag :name, params[:name], class: "form-control",
       placeholder: "Rechercher un produit", id: 'searchbar-products', value: params[:name] %>
       <%= select_tag :category, options_for_select([["Toute catégorie", nil], "Alimentaire", "Medicament", "Ingredient"], params[:category])%>
       <%= submit_tag "Filtrer", class: "btn-index" %>
     <% end %>
-</div> -->
+</div>
 
 <div class="container-index">
     <div class="cards-index">
