@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   resource :cart, only: [:show]
   resources :order_items
   resources :admin
+  resources :equipes
+  resources :nosvaleurs
   resources :profile, only: :show
   resources :products do
     resources :reviews, only: :create

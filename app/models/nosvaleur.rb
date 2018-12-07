@@ -1,0 +1,3 @@
+class NosValeur < ApplicationRecord
+
+end

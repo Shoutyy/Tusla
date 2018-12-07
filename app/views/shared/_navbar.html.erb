@@ -8,13 +8,15 @@
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
     <div class="dropdown">
-          <%= link_to "Produits", products_path(category: nil), class: "navbar-wagon-link" %>
-      <div class="dropdown-content">
+        <%= link_to "Gamme", products_path(category: nil), class: "navbar-wagon-link" %>
+      <!-- <div class="dropdown-content">
         <%= link_to "Alimentaire", products_path(category: "Alimentaire") %>
         <%= link_to "Medicament", products_path(category: "Medicament") %>
         <%= link_to "Ingredient", products_path(category: "Ingredient") %>
-      </div>
+      </div> -->
     </div>
+    <%= link_to "Nos valeurs", "/nosvaleurs", class: "navbar-wagon-item navbar-wagon-link" %>
+    <%= link_to "L'équipe", "/equipes", class: "navbar-wagon-item navbar-wagon-link" %>
 
     <% if user_signed_in? %>
 
