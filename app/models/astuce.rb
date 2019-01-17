@@ -1,0 +1,3 @@
+class Astuce < ApplicationRecord
+
+end

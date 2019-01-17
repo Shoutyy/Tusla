@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   resources :admin
   resources :equipes
   resources :nosvaleurs
+  resources :astuces
   resources :profile, only: :show
   resources :products do
     resources :reviews, only: :create
