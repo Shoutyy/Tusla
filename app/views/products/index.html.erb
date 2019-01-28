@@ -7,23 +7,30 @@
     <% end %>
 </div> -->
 
-<div class="container-index">
-    <div class="cards-index">
-      <% @products.each do |product| %>
-          <div class="card-index">
-              <% if product.photo.present? %>
-                <div class="photo-index" style="background: url('<%= product.photo %>')">
-                </div>
-              <% else %>
-                <div class="photo-index" style="background: url('https://images.unsplash.com/photo-1498766707495-856f300a5821?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=fcbd78da5b0ccb1fcf6e54a2e5e51f63&auto=format&fit=crop&w=1651&q=80');">
-                </div>
-              <% end %>
-              <div class="texte-index">
-                <h2><%= link_to product.name, product_path(product.id) %></h2>
-                <p><%= product.description %></p>
-                <p><%= product.price %> €</p>
-              </div>
+<div class="main-container-show">
+  <div class="container-show">
+    <div class="card-show2">
+        <div class="texte-show3">
+          <div class="photo-show3" style="background: url('https://media.discordapp.net/attachments/532244007309410304/532489350596788225/IMG_7903.JPG?width=1720&height=968');">
           </div>
-      <% end %>
+          <p>En allant du Cambodge des membres de notre équipe ont appris les bienfait du curcuma pour la peau. Nous avons donc décider de ramener ce produit en Européen pour vous faire profiter de ses vertus. <br/>
+
+          Nous aimons beaucoup voyager , c'est pour cela que nous vous offrons une gamme adaptée aux voyage fréquent. C'est la forme solide de nos produits qui vous permettra de les transporter partout avec vous tout en gardant un encombrement minimal. </p>
+          <div class="cards-index1">
+            <div class="card-index1">
+              <a href="/products1/"><img src="https://media.discordapp.net/attachments/501033292087296000/539396526288404501/AB8F14D6-885F-4502-B4AA-810F77CFE891.JPG?width=1290&height=968" class="photo-show4" alt= "Products1"></a>
+            </div>
+            <div class="card-index1">
+              <a href="/products2/"><img src="https://media.discordapp.net/attachments/501033292087296000/539396529702567937/216DBABD-ADC2-4A55-B910-909845AE7FDB.JPG?width=1206&height=968" class="photo-show4" alt= "Products2"></a>
+            </div>
+            <div class="card-index1">
+              <a href="/products3/"><img src="https://media.discordapp.net/attachments/501033292087296000/539396519502151700/2764347D-49CA-43CE-9BCF-782EDF2DF3A7.JPG?width=800&height=600" class="photo-show4" alt= "Products3"></a>
+            </div>
+          </div>
+        </div>
     </div>
+  </div>
+
 </div>
+
+

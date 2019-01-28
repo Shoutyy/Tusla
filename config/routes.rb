@@ -13,6 +13,9 @@ Rails.application.routes.draw do
   resources :nosvaleurs
   resources :astuces
   resources :profile, only: :show
+  resources :products1
+  resources :products2
+  resources :products3
   resources :products do
     resources :reviews, only: :create
   end
